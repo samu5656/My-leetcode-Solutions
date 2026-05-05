@@ -12,6 +12,11 @@ using namespace std;
  *     int guess(string word);
  * };
  */
+ class Master {
+    public:
+      int guess(string word);
+ };
+
 
 class Solution {
 public:
