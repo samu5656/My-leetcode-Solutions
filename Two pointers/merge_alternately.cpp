@@ -6,14 +6,22 @@ using namespace std;
 class Solution {
 public:
     string mergeAlternately(string word1, string word2) {
+        int j = 0;
+        int i = 0;
         string result = "";
-        int n = word1.size();
-        int m = word2.size();
 
-        for (int i = 0; i < max(n, m); i++) {
-            if (i < n) result += word1[i];
-            if (i < m) result += word2[i];
+        while (i < word1.size() && j < word2.size()) {
+            result += word1[i];
+            result += word2[j];
+            i++;
+            j++;
         }
+
+        if (i == word1.size())
+            result += word2.substr(j);
+
+        if (j == word2.size())
+            result += word1.substr(i);
 
         return result;
     }
