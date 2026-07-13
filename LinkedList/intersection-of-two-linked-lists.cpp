@@ -22,7 +22,9 @@
  */
 #include <stdio.h>
 #include <stdlib.h>
+#include <bits/stdc++.h>
 using namespace std;
+
 class Solution {
 public:
     ListNode *getIntersectionNode(ListNode *headA, ListNode *headB) {
